@@ -1,0 +1,9 @@
+.heart-info {
+  padding: 0 8px 2px 8px;
+}
+
+.heart-container {
+  display: flex;
+  align-items: center;
+}
+

@@ -1,0 +1,11 @@
+.tag {
+  padding: 8px;
+  font-size: 14px;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.tag:hover {
+  background-color: rgb(200, 195, 195);
+}

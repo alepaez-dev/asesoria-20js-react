@@ -1,0 +1,57 @@
+
+.basicButton {
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  border-radius: 6px;
+  padding: 6px 14px;
+}
+
+/* Primario */
+.btnPrimary {
+  border: 1px solid rgb(59, 73, 223);
+  color: rgba(59,73,223,1);
+  background-color: white;
+}
+
+
+.btnPrimary:hover {
+  background-color: rgba(59,73,223,1);
+  color:white
+}
+
+/* Secundario */
+.btnSecondary {
+  border: none;
+  color: grey;
+  background-color: white;
+}
+
+.btnSecondary:hover {
+  background-color: rgb(181, 186, 236);
+  color: rgb(114, 122, 212);
+}
+
+/* Terciario */
+.btnTertiary {
+  border: none;
+  color: black;
+  background-color: white;
+}
+
+.btnTertiary:hover {
+  color: rgba(59,73,223,1);
+  /* border: 1px solid grey; */
+  box-shadow: 0px 3px 36px 0px rgba(224,224,224,0.75);
+}
+
+/* Cuarta */
+
+.btnFourth {
+  border: none;
+  color: rgba(59,73,223,1);;
+  background-color: white;
+}
+
+.btnFourth:hover {
+  background-color: rgb(236, 235, 235);
+}
