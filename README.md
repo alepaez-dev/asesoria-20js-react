@@ -1,4 +1,4 @@
-pt 2 de asesoria de react 8/10/12 -> 
+pt 2 de asesoria de react 8/10/22 -> 
 - UseEffect
 - Routes
 - Analisis de jerarquia de componentes
