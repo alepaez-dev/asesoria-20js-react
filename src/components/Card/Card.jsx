@@ -6,25 +6,32 @@ import Heart from "../../assets/icons/Heart";
 import Comment from "../../assets/icons/Comment";
 import Save from "../../assets/icons/Save";
 import Reaction from "../Reaction";
+import { useUser } from "../../hooks/useUser"
 
 const Card = ({ 
     hasImage,
     post, 
     setSavedPosts, 
     savedPosts,
-    index
+    index,
+    name
 }) => {
+    console.log("nommmbre en card", name)
+    // Hooks
+    useUser(name)
+
     // Local states
     const [isSaved, setIsSaved] = useState(false);
 
+
     const handlerOnSave = () => {
+        alert("Tu post ha sido guardado exitosamente")
         const newSavedPosts = [...savedPosts, post];
         setIsSaved(true);
         setSavedPosts(newSavedPosts);
     };
 
     const handlerOnDelete = () => {
-        console.log("index", index)
         const newSavedPosts = savedPosts.filter((post, idx) => idx !== index)
         setIsSaved(false);
         setSavedPosts(newSavedPosts);
@@ -68,7 +75,7 @@ const Card = ({
                         {/* () => setPosts(info) */}
                         {!isSaved ? (
                             <button
-                                onClick={() => handlerOnSave()}
+                                onClick={handlerOnSave}
                                 className="save-button"
                             >
                                 <Save />
