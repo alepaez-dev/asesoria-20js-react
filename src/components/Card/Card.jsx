@@ -14,12 +14,7 @@ const Card = ({
     setSavedPosts, 
     savedPosts,
     index,
-    name
 }) => {
-    console.log("nommmbre en card", name)
-    // Hooks
-    useUser(name)
-
     // Local states
     const [isSaved, setIsSaved] = useState(false);
 

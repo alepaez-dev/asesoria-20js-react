@@ -6,13 +6,13 @@ import Logo from "./components/Logo/";
 import Navbar from "./components/Navbar/";
 import Input from "./components/Input/";
 import { Outlet } from "react-router-dom";
-import { useMediaQuery } from "react-responsive";
+
 
 function App() {
     // Hooks
-    const isMobile = useMediaQuery({
-        query: "(max-width: 720px)",
-    });
+    // const isMobile = useMediaQuery({
+    //     query: "(max-width: 720px)",
+    // });
 
     /**
      * useEffect
@@ -38,7 +38,7 @@ function App() {
     return (
         // Las cosas que se repitan en su app
         <>
-            <Navbar isMobile={isMobile}/>
+            <Navbar isMobile={false}/>
             {/* Renderizado del hijo */}
             <Outlet />
 

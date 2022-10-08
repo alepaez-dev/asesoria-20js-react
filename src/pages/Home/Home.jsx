@@ -3,6 +3,7 @@ import { useResponsive } from "../../hooks/useResponsive"
 import { useUser } from "../../hooks/useUser"
 import Button from "../../components/Button";
 import Card from "../../components/Card";
+import { useIsMobile, useIsDesktop } from "../../hooks/useResponsive"
 
 // ES6 -> arrow functions, const
 // Class componentes
@@ -14,6 +15,10 @@ import Card from "../../components/Card";
 // useState, useEffect
  
 const Home = () => {
+
+  const isMobile = useIsMobile()
+  const isDesktop = useIsDesktop()
+
     const data = [
         {
             img: "https://res.cloudinary.com/practicaldev/image/fetch/s--UpX83H3C--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/yutqst8ujn9yyen2wq6e.png",
@@ -90,12 +95,13 @@ const Home = () => {
     const [savedPosts, setSavedPosts] = useState([]);
     // 1era Hooks -> data -> !undefined
     // Renderizar otro componente hijo -> 2da hook
-    const { name , isLoading } = useResponsive()
-    // useUser(name)
-   
-    console.log("isLoading 1", isLoading)
+    const { width, heigth } = useResponsive()
 
 
+    console.log("width", width)
+    if(width < 500) {
+      console.log("estamos en mobile")
+    }
     // useEffect, useSate -> hooks de react
     // Custom Hooks
     // se ouede hacer mas de 1 y en donde
@@ -108,10 +114,6 @@ const Home = () => {
     //   // actualizar
     //   // aqui adentro
     // },[savedPosts])
-
-
-
-    if(isLoading) return <div>esta cargando</div>
 
     // Despues
     return (
@@ -142,7 +144,6 @@ const Home = () => {
                             savedPosts={savedPosts}
                             setSavedPosts={setSavedPosts}
                             index={index}
-                            name={name}
                         />
                     );
                 })}
